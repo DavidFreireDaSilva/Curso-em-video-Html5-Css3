@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>Centralização vertical</title>
+        <style>
+            #container{
+                background-image: url('imagens/target001.png');
+                background-size: 100% 100%;
+                position: relative; /*Posicionamento relativo no container, pare que o conteudo tenha posicionamento absoluto no container*/
+                height: 500px;
+                padding: 10px;
+                background-color: purple;
+            }
+            #conteudo{
+                background-image: url('imagens/target001.png');
+                background-size: 100% 100%;
+                position: absolute; /*Só pode mexer em top e left se o posicionamento for absoluto*/
+                height: 200px;
+                width: 400px;
+                background-color: yellow;
+                left: 50%; /*vai dar inicio do conteudo a partir de 50% contando da esquerda da caixa que está dentro */
+                top: 50%; /*vai dar inicio do conteudo a partir de 50% contando dde cima da caixa que está dentro*/
+                transform: translate(-50%, -50%); /*Estou movendo o conteúdo 50% para esquerda (porque está negativo) e 50% para cima (porque está negativo*/
+            }          
+        </style>
+    </head>
+    <body>
+        <section id="container">
+            <article id="conteudo">
+
+            </article>
+        </section>
+    </body>
+</html>

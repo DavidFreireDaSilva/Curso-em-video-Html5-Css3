@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" constant="width=device-width , initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        
+        <title>Links</title>
+    </head>
+    <body>
+        <h1>Links</h1>
+
+        <h2>Usando links externos</h2>
+        <p>Um link externo é um link que vai apontar para outro site, ou seja, que não é nosso</p>
+        <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io">repositório público no GitHub</a> através da tag &lt;a&gt; &lt;/a&gt;</p><!--href=""é o atributo de referência a hipertexto, ou seja, é o endereço para onde eu vou quando clicar no link, entretanto essa não é a melhor maneira de fazer, porque o site vai ser aberto na mesma guia que meu site-->
+        <p>Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo" target="_blank" rel="external">canal gratuito no youtube</a>através da tag &lt;a&gt; &lt;/a&gt; e com os atributos target="_blank e rel="external"</p> <!--Essa é a maneira correta de se fazer, porque quando o usuário clicar no link, ele vai ser direcionado para o site através de outra guia, essa é a função do target="_blank" e o rel="external" indica que é um site que não tem nada haver com o meu -->
+
+
+        <h2>Usando links internos</h2>
+        <p>Esta é a primeira página do site. Se você quiser pode acessar também a minha <a href="index02.html" rel="next" target="_self">segunda página</a> </p> <!-- <a href="nomedeoarquivo.html" serve para colocar o arquivo que vai ser carregado e direcionado, rel="next" serve para falar para o navegador que esse arquivo do href="" é o meu próximo arquivo, target="_self" serve para falar para o navegador que o arquivo deve ser carregado na minha própria guia-->
+        <p>Esta é a primeira página do site. Se você quiser pode acessar também a minha <a href="exemplo/index03.html" rel="next" target="_self">terceira página</a> </p><!--href="pastadoarquivo/nomedoaquivo.extensãodoarquivo" A gente só consegue carregar essa pasta caso ela esteja na mesma grande pasta do arquivo atual. É muito parecido com a tag de imagens-->
+        <!--OBS: ESSE ATRIBUTO REL SERVE PARA MOSTRAR PARA O NAVEGADOR COMO QUE É O MEU SISTEMA DE NAVEGAÇÃO, OU SEJA, PRATICAMENTE A ORDEM DAS PÁGINAS, SENDO QUE UMA É ABSOLUTA, AS OUTRAS SÃO AS PRÓXIMAS DA ABSOLUTA E ESSAS PRÓXIMAS TEM UMA PÁGINA ANTERIOR QUE OBVIAMENTE É A PÁGINA ABSOLUTA-->
+
+        <h2>Liks para downloads</h2>
+        <ul>
+            <li><a href="exempoDownload/pdpDeLinks.zip" download="exempoDownload/pdpDeLinks.zip" type="application/zip">Livro em arquivo compactado zip</a></li>
+        </ul>
+        <!--OBS:PARA MAIS INFORMAÇÕES ACESSAR O PDF QUE ESTÁ DENTRO DA PASTA COMPACTADDA EM ZIP, QUE É A AULA DO GUANABARA-->
+
+        <h2>Whatsapp</h2>
+        <p>Esse site mostra como gerar um link para ser direcionado para o contato whatsapp https://olhardigital.com.br/2017/06/23/dicas-e-tutoriais/crie-um-link-para-o-seu-numero-no-whatsapp-e-facilite-o-papo-com-outros-contatos/</p>
+        <p>Caso queira meu contato wpp <a href="https://api.whatsapp.com/send?phone=5511954498003&text=Olá,%20meu%20amigo!" target="_blank" rel="external">clique aqui</a></p>
+        
+        
+     
+    </body>
+</html>

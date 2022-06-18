@@ -1,0 +1,25 @@
+@charset "UTF-8"; /*Serve para não ter problema com caracteres especiais dentro das CSS*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:linear-gradient(to right ,#DAFDBA,#9AEBA3);
+}
+main{
+    background-color: white;
+    box-shadow: 10px 10px 10px #0120306e; /*Sombra externa das bordas do bloco, primeiro parametro quanto vai ficar para o lado, segundo parametro quanto vai ficar para baixo, terceiro parametro quanto vai espalhar e o quarto parametro é a cor*/
+    border-radius: 30px; /*Vai arrededondar as pontas quadradas para que fiquem com pontas redondas*/
+    width: 600px;  /*Largura de 600px*/
+    padding: 20px; /*Vai centralizar independente do tamanho da tela*/
+    margin: auto;  /*Vai centralizar independente do tamanho da tela*/
+}
+h1 {
+    text-align: center; /*Vai colocar o texto no centro*/
+    color: #024566;
+    text-shadow: 2px 2px 2px #0245663a; /*Sombra externa das bordas do texto, primeiro parametro quanto vai ficar para o lado, segundo parametro quanto vai ficar para baixo, terceiro parametro quanto vai espalhar e o quarto parametro é a cor*/
+}
+h2 {
+    color: #13678A
+}
+p {
+    text-align: justify;
+}

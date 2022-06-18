@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/*Se necessário eu posso colocar um display:block em um elemento inline, e um display:inline em um elemento block */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(47, 47, 223, 0.397);
+}
+h1{ 
+    height:300px;
+    width:300px;
+    padding: 10px 15px 10px 10px; /*Cima, direita, baixo esquerda*/  
+    outline: 15px dashed rgb(5, 5, 59); /*Linha entre a borda e a margem,espessura,tipo,cor*/
+    margin: 20px auto 20px auto;   /*Vai centralizar o conteúdo horizontalmente*/
+    border: 15px solid rgb(131, 22, 22); /*Borda,espessura,tipo,cor*/
+    background-color: lightgrey;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-style: bolder;
+    font-size: 1.2em;
+    margin: 10px;
+    border:2px solid black;
+    padding:5px;
+    }
+header{
+    background-color: blue;
+}
+main{
+    background-color: rgba(37, 37, 151, 0.767);
+}
+footer{
+    background-color: rgb(16, 16, 46);
+    text-align: center;
+    padding: 5px;
+    color:white;
+    font-style: bolder;
+    
+}
+section#noticias{
+    background-color: white;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>Teste de imagem de fundo</title>
+        <style>
+            body{
+                background-image: url(imagens/wallpaper001.jpg); /*Caso a imagem seja pequena para determinado componente, ela se repete até preencher toda a caixa, caso a imagem seja muito grande, deve ser configurada manualmente para ficar certinha na página web*/
+            }
+            div.quadrado{
+                border: 2px solid black;
+                width: 300px;
+                height: 300px;
+                display: inline-block;
+                border-radius: 10px;
+                background-color: lightgrey;
+            }
+            div#q1{
+                background-color: rgb(53, 82, 163);
+            }
+            div#q2{
+                background-image: linear-gradient(to bottom, yellow, red);                
+            }
+            div#q3{ /**/
+                background-image: url(imagens/pattern001.png); /*Importante dizer que essa imagem de fundo não tem um sentido semântico, e sim visual, serve para decorarmos nosso site*/
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <div class="quadrado" id="q1">
+
+            </div>
+            <div class="quadrado" id="q2">
+
+            </div>
+            <div class="quadrado" id="q3">
+
+            </div>
+        </main>
+        <footer>
+
+        </footer>        
+    </body>
+</html>

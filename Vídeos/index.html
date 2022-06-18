@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+        <title>Vídeos</title>       
+    </head>
+    <body>
+        <h1>Inserindo vídeos hospedados localmente</h1>
+        <p>Este vídeo está hospedado no meu próprio servidor</p>
+        <video height="300" width="500" controls  autoplay poster="logohtmlalterada.png" loop>
+            <source src="Video1.2.m4v" type="video/mp4">
+            <source src="video1.mp4"   type="video/mp4">
+            <source src="Video1.2.ogv" type="video/ogg">
+            <p>Seu navegador não tem compatibilidade com reprodução de vídeos</p>
+        </video>
+        <!--Ele primeiro tenta rodar o arquivo de vídeo de cima, caso ão consiga vai tentar o de baixo, e assim sucessivamente-->
+        <!--autoplay a mídia se inicia sozinha
+            loop a mídia fica se repetindo
+            controls é o botão de controle da mídia (Inicia, pausa e etc)
+            poster é caso queira que o vídeo se inicie com determinada imagem-->
+        <h1>Inserindo vídeos do youtube</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zrIfhUVB_3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!--O mais recomendado é postar o vídeo no youtube(tem que ter um canal) e depois copiar o código do vídeo de lá (através do compartilhat-> Incorporação-> Copiar), com isso, os dados não são consumidos do meu servidor, e sim do youtube, caso o vídeo seja de outra pessoa, tomar cuidado com a questão dos direitos autorais-->
+
+
+        
+
+   
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE>  
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" constant="width=device-width , initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Listas</title>
+    </head>
+    <body>
+        <h1>Trabalhando com listas</h1>
+        <h2>Listas ordenadas</h2><!--São aquelas que a ordem faz a diferença-->
+        <ol type="1" start="5"> 
+            <!--type="1" significa que a lista é numérica. start="4" significa que a numeração vai comerçar no número 4 -->
+            <!--type="A" significa que a lista é alfabética em letras maiúsculas -->
+            <!--type="a" significa que a lista é alfabética em letras minúsculas -->
+            <!--type="I" significa que a lista é em números romanos com letras maiúsculas -->
+            <!--type="i" significa que a lista é em números romanos com letras minúsculas -->
+            <li>Acordar</li>
+            <li>Ligar para o João</li>
+            <li>Tomar café</li>
+            <li>Escovar os dentes</li>
+            <li>Ir para a faculdade</li>
+            <li>Almoçar</li>
+            <li>Ir para o trabalho</li>
+            <li>Voltar para casa</li>
+            <li>Jantar</li>
+            <li>Dormir</li>
+            
+        </ol>
+         
+        <h2>Listas não ordenadas</h2>
+        <ul type="square"> <!--São aquelas que a ordem não faz a diferença-->
+            <!--type="disc" significa que a lista vai ficar com bolinhas pretas  -->
+            <!--type="circle" significa que a lista vai ficar com bolinhas brancas da borda preta -->
+            <!--type="square" significa que a lista vai ficar com quadradinhos pretos -->
+           <li>Pão</li> 
+           <li>Leite</li>
+           <li>Tomata</li>
+           <li>Manteiga</li>
+           <li>Arroz</li>
+           <li>Feijão</li>
+        </ul>
+        <!--OBS: O ATRIBUTO START PODE SER UTILIZADO COM QUALQUER ATRIBUTO TYPE, MAS VALE LEMBRAR QUE O START É UM ATRIBUTO NÚMERO, ENTÃO POR EXEMPLO, SE QUISER COMEÇAR A CONTAGEM DA LETRA C, TEM QUE COLOCAR TYPE="A" START="3"-->
+        <!--Mistura de listas, ou seja, podeos manipular as listas da maneira que quisrmos para ter um entendimento maior na página web-->
+        <h2>Minhas linguagens favoritas</h2>
+        <ol type="1">
+            <li>Antigas</li>
+            <ol type="a">
+                <li>Cliper</li>
+                <li>Visual Basic</li>
+                <li>Fortran</li>
+                <li>Delphi</li>
+            </ol>
+            <li>Novas</li>
+            <ol type="a">
+                <li>PHP</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Kotlin</li>
+            </ol>
+        </ol>
+
+        <h2>Meus jogos favoritos</h2>
+        <ol>
+            <li>NES</li>
+            <ul type="square">
+                <li>Mario Bros</li>
+                <ul type="circle">
+                    <li>Mario Bros 3</li>
+                    <li>Mario Lost Levels</li>
+                </ul>
+                <li>Ninja Gaiden</li>
+            </ul>
+            <li>SNE</li>
+            <ul type="square">
+                <li>Mario Bros </li>
+                <li>Donkey Kong</li>
+            </ul>
+            <li>PlayStation</li>
+            <ol>
+                <li>Final Fantasy</li>
+                <li>Castlevania</li>
+            </ol>
+        </ol>
+
+        <h2>Lista de definições</h2>
+        <dl>
+            <dt>HTML</dt> <!--Termo-->
+            <dd>Linguagem de marcação para a criação do conteúdo de um site</dd>  <!--Descrição-->
+            <dt>CSS</dt>
+            <dd>Linguagem de marcação para criação do design de um site</dd>
+            <dt>JavaScript</dt>
+            <dd>Linguagem de programação para a criação de interatividade de um site</dd>
+        </dl>
+
+        <!--OBS: QUANDO UM USUÁRIO FAZ UMA BUSCA EM UM NAVEGADOR, OS MECANISMOS DE BUSCAS DÃO PRIORIDADES PARA ESSAS LISTAS DE DEFINIÇÕES, POR CAUSA DA QUESTÃO SEMÂNTICA-->
+    </body>
+</html>

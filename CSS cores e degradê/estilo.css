@@ -1,0 +1,26 @@
+
+@charset "UTF-8";
+
+/*Para fazer degradê em CSS usamos a funcionalidade background-imame com a função linear-gradient, onde o primeiro parâmetro é a direção vírgula quantas cores quiser*/
+
+p#paragrafo1{
+    /*Degrade da esquerda para direita */
+    background-image: linear-gradient(to right, white,blue);
+}
+p#paragrafo2{
+    /*Degrade da direita para esquerda */
+    background-image: linear-gradient(to left, white,blue);
+}
+   /*Degrade de baixo para cima */
+p#paragrafo3{
+    background-image: linear-gradient(to top,white,rgb(150, 216, 177));
+}
+   /*Degrade de cima para baixo */   
+p#paragrafo4{
+    background-image: linear-gradient(to bottom, white,rgb(238, 151, 111));
+}
+body{
+    /*Degrade de de 45 graus onde a primeira cor ocupa 20 da página web */ 
+    background-image: linear-gradient(45deg,#B0EFE6 20%,#EFABB6,#A29AB5,#A87EA1,#4460A5);
+
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widht, inital-scale=1.0">
+        <title>Tabela mais elaborada</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            table{
+                width: 350px;
+                border-collapse: collapse;
+                position: relative; /*Faz parte da configuração para fixar o cabeçalho da tabela*/
+            }
+            caption{
+                font-size: 1.5em;
+                font-weight: bold;
+                padding: 5px;
+                background-color: lightgrey;
+            }
+            td, th{
+                border: 1px solid black;
+                padding: 5px;
+            }
+            thead, tfoot{
+                background-color: rgb(32, 31, 31);
+                color: white;
+            }
+            td.num{
+                text-align: right;
+            }
+            /*
+            tbody > tr:nth-child(2n){ Efeito zebrado(serve para o usuário ter mais facilidade para entender a tabela)nth-child(2n) faz com que as configurações sejam aplicadas de 2 em 2 linhas, se quisesse de 3 em 3 era só alterar dentro do parênteses, e assim sucessivamente, ou fazer por ímpar(odd) e par(even), como está abaixo
+                background-color: lightgrey; 
+            }
+            */
+            tbody > tr:nth-child(odd){ /*Ou 2n-1 dentro do parênteses(Para a configuração começar da primeira linha(tr) da tabela)*/
+                background-color: lightgrey; 
+            }
+            tbody > tr:nth-child(even){ /*Ou 2n dentro do parênteses(Para a configuração começar da segunda linha(tr) da tabela), porque como é 2, está pulando de 2 em 2*/
+                background-color: rgba(54, 252, 9, 0.313); 
+            }
+
+            /*Mantendo o cabeçalho fixo na tela, pelo menos na parte da tabela (AINDA NÃO SERVE PARA TODOS OS NAVEGADORES)
+            */
+            thead > tr > th{
+                position: sticky; /*Colável/grudável*/
+                top: -1px; /*vai colar assim que a tabela subir*/
+                background-color:  rgb(32, 31, 31); /*esse background tem que ser da mesma cor do background do cabeçalho th dentro do thead, é obrigatório colocar o background porque senão vai grudar somente o texto*/
+            } 
+
+        </style>
+    </head>
+    <body>
+        <h1>Forma elaborada de fazer tabelas (melhor forma para tabelas grandes)</h1>
+        <!--ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION (TÍTULO/LEGENDA DA TABELA) (no caption não pode ter tr e nem td)
+            THEAD (CABEÇALHO DA TABELA) (não é obrigatório)
+                tr,td,th
+            TBODY (CORPO DA TABELA)
+                tr,td,th
+            TFOOT (FOOT DA TABELA)(não é obrigatório)
+                tr,td,th
+        -->
+        <table>
+            <caption>População das Unidades Federativas</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Estado</th><!--scope = "col" serve para falar que esse th é um título da coluna; scope = "row" serve para falar que o th é um título da linha-->
+                    <th scope="col" style = "width: 100px;">População</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">45.919.049</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">21.168.791</td>
+                </tr>
+                <tr>
+                    <td>Rio de janeiro</td>
+                    <td class="num">17.264.943</td>
+                </tr>           
+                <tr>
+                    <td> Bahia</td>
+                    <td class="num">14 985 284</td>
+                </tr>  
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">11 597 484</td>
+                </tr>       
+                <tr>
+                    <td> Rio Grande do Sul</td>
+                    <td class="num">11 466 630</td>
+                </tr>  
+                <tr>
+                    <td> Pernambuco</td>
+                    <td class="num">9 674 793</td>
+                </tr>  
+                <tr>
+                    <td>Ceará</td>
+                    <td class="num">9 240 580</td>
+                </tr>  
+                <tr>
+                    <td>Pará</td>
+                    <td class="num">8 777 124</td>
+                </tr>  
+                <tr>
+                    <td>Santa Catarina</td>
+                    <td class="num">7 338 473</td>
+                </tr>  
+                <tr>
+                    <td> Goiás</td>
+                    <td class="num">7 206 589</td>
+                </tr>  
+                <tr>
+                    <td> Maranhão</td>
+                    <td class="num">7 153 262</td>
+                </tr>  
+                <tr>
+                    <td> Amazonas</td>
+                    <td class="num">4 269 995</td>
+                </tr>  
+                <tr>
+                    <td>Espírito Santo</td>
+                    <td class="num">4 108 508</td>
+                </tr>  
+                <tr>
+                    <td>Paraíba</td>
+                    <td class="num">4 059 905</td>
+                </tr>  
+                <tr>
+                    <td>Mato Grosso</td>
+                    <td class="num">3 567 234</td>
+                </tr> 
+                <tr>
+                    <td> Rio Grande do Sul</td>
+                    <td class="num">11 466 630</td>
+                </tr>  
+                <tr>
+                    <td> Alagoas</td>
+                    <td class="num">3 365 351</td>
+                </tr>  
+                <tr>
+                    <td> Piauí</td>
+                    <td  class="num">3 289 290</td>
+                </tr>  
+                <tr>
+                    <td> Distrito Federal</td>
+                    <td class="num">3 094 325</td>
+                </tr>  
+                <tr>
+                    <td> Mato Grosso do Sul</td>
+                    <td class="num">2 839 188</td>
+                </tr>  
+                <tr>
+                    <td>Sergipe</td>
+                    <td class="num">2 338 474</td>
+                </tr>  
+                <tr>
+                    <td>  Rondônia</td>
+                    <td class="num">1 815 278</td>
+                </tr>  
+                <tr>
+                    <td>Tocantins</td>
+                    <td class="num">1 607 363</td>
+                </tr>  
+                <tr>
+                    <td> Acre</td>
+                    <td class="num">906 876</td>
+                </tr>  
+                <tr>
+                    <td>Amapá</td>
+                    <td class="num">877 613</td>
+                </tr>  
+                <tr>
+                    <td> Roraima</td>
+                    <td class="num">652 713	</td>
+                </tr> 
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" >Total de Habitantes</th><!--scope = "row" serve para falar que esse th é um título da linha-->
+                    <td  class="num"><strong>210.147.125</strong></td>
+                </tr>
+            </tfoot>
+            
+        </table>
+        <!--texto decorativo para mostrar que o fixamento da tabela se encerra assim que a tabela chegar ao fim-->
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium fugiat, molestias ullam laborum quam iusto soluta officia eaque, ut omnis quisquam voluptatem libero possimus illo voluptatibus commodi recusandae ipsa reprehenderit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatum quaerat ullam sint saepe cupiditate fuga consequuntur quam ad illum, ipsa, in aliquam assumenda reprehenderit corporis, qui sequi numquam voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore cumque dolores non, sint autem at, odit, ipsam dicta earum animi hic obcaecati impedit itaque? Quas hic cupiditate quos eligendi neque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis necessitatibus alias asperiores eius corporis voluptas possimus, modi voluptatum, eaque iusto officiis veniam distinctio at pariatur odit illo magni dolore error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim veniam, amet perspiciatis rem quas pariatur illo officia natus architecto. Molestias labore omnis vel incidunt tenetur repudiandae dolorum ipsum architecto atque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim totam accusantium autem reiciendis laudantium, rerum tempora atque nam ducimus ullam, alias esse vero at amet incidunt eligendi repudiandae officia dicta?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium fugiat, molestias ullam laborum quam iusto soluta officia eaque, ut omnis quisquam voluptatem libero possimus illo voluptatibus commodi recusandae ipsa reprehenderit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatum quaerat ullam sint saepe cupiditate fuga consequuntur quam ad illum, ipsa, in aliquam assumenda reprehenderit corporis, qui sequi numquam voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore cumque dolores non, sint autem at, odit, ipsam dicta earum animi hic obcaecati impedit itaque? Quas hic cupiditate quos eligendi neque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis necessitatibus alias asperiores eius corporis voluptas possimus, modi voluptatum, eaque iusto officiis veniam distinctio at pariatur odit illo magni dolore error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim veniam, amet perspiciatis rem quas pariatur illo officia natus architecto. Molestias labore omnis vel incidunt tenetur repudiandae dolorum ipsum architecto atque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim totam accusantium autem reiciendis laudantium, rerum tempora atque nam ducimus ullam, alias esse vero at amet incidunt eligendi repudiandae officia dicta?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium fugiat, molestias ullam laborum quam iusto soluta officia eaque, ut omnis quisquam voluptatem libero possimus illo voluptatibus commodi recusandae ipsa reprehenderit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatum quaerat ullam sint saepe cupiditate fuga consequuntur quam ad illum, ipsa, in aliquam assumenda reprehenderit corporis, qui sequi numquam voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore cumque dolores non, sint autem at, odit, ipsam dicta earum animi hic obcaecati impedit itaque? Quas hic cupiditate quos eligendi neque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis necessitatibus alias asperiores eius corporis voluptas possimus, modi voluptatum, eaque iusto officiis veniam distinctio at pariatur odit illo magni dolore error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim veniam, amet perspiciatis rem quas pariatur illo officia natus architecto. Molestias labore omnis vel incidunt tenetur repudiandae dolorum ipsum architecto atque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim totam accusantium autem reiciendis laudantium, rerum tempora atque nam ducimus ullam, alias esse vero at amet incidunt eligendi repudiandae officia dicta?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium fugiat, molestias ullam laborum quam iusto soluta officia eaque, ut omnis quisquam voluptatem libero possimus illo voluptatibus commodi recusandae ipsa reprehenderit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatum quaerat ullam sint saepe cupiditate fuga consequuntur quam ad illum, ipsa, in aliquam assumenda reprehenderit corporis, qui sequi numquam voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore cumque dolores non, sint autem at, odit, ipsam dicta earum animi hic obcaecati impedit itaque? Quas hic cupiditate quos eligendi neque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis necessitatibus alias asperiores eius corporis voluptas possimus, modi voluptatum, eaque iusto officiis veniam distinctio at pariatur odit illo magni dolore error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim veniam, amet perspiciatis rem quas pariatur illo officia natus architecto. Molestias labore omnis vel incidunt tenetur repudiandae dolorum ipsum architecto atque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim totam accusantium autem reiciendis laudantium, rerum tempora atque nam ducimus ullam, alias esse vero at amet incidunt eligendi repudiandae officia dicta?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium fugiat, molestias ullam laborum quam iusto soluta officia eaque, ut omnis quisquam voluptatem libero possimus illo voluptatibus commodi recusandae ipsa reprehenderit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatum quaerat ullam sint saepe cupiditate fuga consequuntur quam ad illum, ipsa, in aliquam assumenda reprehenderit corporis, qui sequi numquam voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore cumque dolores non, sint autem at, odit, ipsam dicta earum animi hic obcaecati impedit itaque? Quas hic cupiditate quos eligendi neque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis necessitatibus alias asperiores eius corporis voluptas possimus, modi voluptatum, eaque iusto officiis veniam distinctio at pariatur odit illo magni dolore error! Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim veniam, amet perspiciatis rem quas pariatur illo officia natus architecto. Molestias labore omnis vel incidunt tenetur repudiandae dolorum ipsum architecto atque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim totam accusantium autem reiciendis laudantium, rerum tempora atque nam ducimus ullam, alias esse vero at amet incidunt eligendi repudiandae officia dicta?</p>
+
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tamanho da imagem de fundo</title> 
+        <style>
+            /*O certo é dimensionar o tamanho da imagem por cover ou contain, porque se alterar por medidas em pixels, a imagem vai sempre mostrar o fundo da pagina web, ou seja, ela nao vai ocupar completamente o tamanho desejado*/
+            body{
+                height: 100vh;
+                background-color: black;
+                background-image: url('imagens/wallpaper002.jpg');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover /*Faz com que a imagem caiba na tela, pode ser que ele corte um pouco da imagem na parte de altura ou largura, mas vai sempre ocupar a dimensão da caixa desejada, nesse caso, o body*/
+                /*background-size: contain; Faz com que o tamanho da imagem seja 100% exibida, porém, pode ser que a imagem não ocupe a viewport inteira e fique mostrando o fundo*/
+            }
+            main{
+                background-color: white;
+                max-width: 600px;
+                padding: 10px;
+                margin: auto;
+                border: 1px solid darkblue;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Teste de imagem de fundo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit provident tempore, a, voluptas quae hic iste quia officiis non voluptate, ex tempora! Voluptas debitis error quidem molestiae sunt tenetur expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aut ducimus dicta unde possimus magni ex quia, vero atque. Tenetur nemo incidunt exercitationem voluptatum laboriosam repellat, aperiam repudiandae nisi. Natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, commodi. Nam quod minima quasi tempore soluta? Ea blanditiis eligendi accusamus voluptate velit pariatur maiores dignissimos. Temporibus est accusamus tempore maxime.</p>
+        </main>
+    </body>
+</html>

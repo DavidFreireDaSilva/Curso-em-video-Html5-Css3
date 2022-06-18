@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html lang="pt-br">
+    <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" constant="width=device-width , initial-scale=1.0">
+       <link rel="shortcut icon" href="favicon.ico" type="image/x-ico">
+       <title>Outras formatações</title>
+    </head>
+    <body>
+        <h1>Outras formatações</h1>
+        <h2>Código fonte</h2>
+        <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem javaScript</p> <!-- Code serve para que os caracteres tenham os mesmos espaços entre eles na página web, com isso determinados letras não ficam espremidas, como por exemplo t,i,l e etc-->
+
+        <pre>
+            <code>
+        Scanner entrada = new Scanner(System.in) ; 
+        System.out.println("Digite um número");
+        int num = entrada.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println("Seu número é par");
+        }else {
+            System.out.println("Seu número é ímpar");
+        }
+
+            </code>
+        </pre><!-- Pre serve para o navegador considerar os espaços e tabulações da codificação, muito recomendado quando o programador quer mostrar a estrutura de um código na página web-->
+    
+        <h2>Citações Simples</h2>
+        <p>Como diria o pai de um amigo; <q>o computador é um burro muito rápido</q></p> <!--Q significa citação de forma semântica e abre as aspas-->
+        <h2>Citações Completas</h2>
+        <p>Segundo Maurício Samy Silva, no seu livro para leigos:</p>
+        <blockquote cite="https://www.google.com.br/books/edition/Fundamentos_de_HTML5_e_CSS3/2iPYCQAAQBAJ?hl=pt-BR&gbpv=0"><!--O atribute cite significa que eu estou citando determinado livro, visualmente não vai mudar nada, a parte interna do meu site vai saber que eu estou referenciando esse livro-->
+            Folha de estilo em cascata é um mecanismo simples para adicionar estilos (por exemplo: fontes,cores,espaçamento) aos documentos web. <!--blockquote significa citação de forma semântica e abre as aspas, entretanto essa citação vai dar um quebra de linha na página web e vai ser deslocada horizontalmente, e também ajuda nos mecanismos de busca dos navegadores-->
+        </blockquote>
+         
+        <h2>Abreviações</h2>
+        <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascating Style Sheets">CSS</abbr></p> <!--Abbr com o atributo title significa que é uma abreviação de determinada palavra, onde o atributo title tem a palavra completa-->
+    </body>
+
+</html>

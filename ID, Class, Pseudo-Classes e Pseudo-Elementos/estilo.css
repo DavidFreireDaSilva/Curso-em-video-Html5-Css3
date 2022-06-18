@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/*
+Em HTML é id = em CSS é #
+Em HTML é class = em CSS é .
+Pseudo-classe é : (está relacionado ao estado de um elemento, como por exemplo no hover)
+> Significa que tal elemento é filho de tal elemento, exeplo:
+div > p {
+Significa que p é filho da div, e os estilos nesse caso devem ser aplicados apenas para os p que estiverem dentro da div
+}
+: = Pseudo-Classe
+:: = Pseudo-Elemento
+*/
+body{
+  background-color:rgb(194, 243, 192);
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1#principal{
+    background-color:rgb(2, 22, 1);
+    color: white;
+    text-align: center;
+}
+h1{
+    color:rgb(5, 63, 3);
+}
+h2.basico{
+    color:rgb(51, 141, 48);
+}
+h2.intermediario{
+    color: rgb(151, 149, 11);
+}
+h2.avancado{
+    color:rgb(107, 16, 16);
+}
+div.d1{
+    display: inline-block; /*Sereve para deixar os elementos na mesma linha*/
+    background-color:darkgray;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    border: 2px solid black; /*Shorthand de borda, largura da borda, tipo da borda e cor da borda*/
+    }
+div.d1:hover{
+    background-color:rgb(107, 16, 16) ;
+}
+
+div#surpresa{
+    font-weight:bolder;
+    font-size:1.3em;
+    color:brown;
+}
+div:hover#surpresa{
+    color:blue;
+    background-color:rgb(51, 141, 48);
+}
+div:hover#surpresa > p { /*div#surpresa > p significa que o p é filho da div, ou seja, mexa apenas no paragrafo que seja filho da div*/
+    display: block; /*Serve para mostrar o conteúdo*/
+    color:red;
+}
+
+div#surpresa > p { /*div#surpresa > p significa que o p é filho da div, ou seja, mexa apenas no paragrafo que seja filho da div*/
+    
+    display: none; /*display: none; serve para esconder o conteúdo, ou seja, ocultar*/
+}
+
+a{
+    text-decoration: none;/*Vai tirar o sublinhado do link*/
+}
+a:visited#primeiro{ /*Esse estado visited serve para links, quando o link já foi visitado o conteúdo que gera o link fica com as configurações abaixo*/
+    color:red;
+}
+a:hover{
+    text-decoration: underline; /*Quando eu passar o mouse por cima o underline vai voltar*/
+}
+a:active#segundo{ /*Esse estado active serve para as configurações abaixo serem ativadas quando o link for clicado*/
+    color:blue;
+}
+
+a#terceiro::after{/*Isso é um pseudo-elemento, cada link com o id terceiro, depois*/
+    content: ' [É um link] '; /*content: ' ' significa conteúdo*/
+}
+a#terceiro::before{/*Isso é um pseudo-elemento, cada link com o id terceiro, antes*/
+    content: ' [É um link] '; /*content: ' ' significa conteúdo*/
+}
+

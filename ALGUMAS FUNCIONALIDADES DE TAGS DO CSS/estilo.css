@@ -1,0 +1,150 @@
+@charset "UTF-8"; /*Serve para não ter problema com caracteres especiais dentro das CSS*/
+
+*{/* Configuração globa em css ( * ), isso significa que TODAS AS TAGS VÃO TER AS CONGIGURAÇÕES QUE ESTIVEREM AQUI DENTRO*/
+    margin: 0px;
+    padding: 0px;
+}
+:root{/* declaração de variáveis em css ( --nomedavariavel: oquedesejaarmasenar )*/
+--cor0: #c5ebd6;
+--fonte-android: 'Android', cursive;
+}
+
+body {
+    /*CENTRALIZAÇÃO VERTICALMENTE*/
+    /*#container{*/
+        background-image: url('imagens/target001.png');
+        background-size: 100% 100%;
+        position: relative; /*Posicionamento relativo no container, pare que o conteudo tenha posicionamento absoluto no container*/
+        height: 500px;
+        padding: 10px;
+        background-color: purple;
+    /*}
+    #conteudo{ */
+        background-image: url('imagens/target001.png');
+        background-size: 100% 100%;
+        position: absolute; /*Só pode mexer em top e left se o posicionamento for absoluto*/
+        height: 200px;
+        width: 400px;
+        background-color: yellow;
+        left: 50%; /*vai dar inicio do conteudo a partir de 50% contando da esquerda da caixa que está dentro */
+        top: 50%; /*vai dar inicio do conteudo a partir de 50% contando dde cima da caixa que está dentro*/
+        transform: translate(-50%, -50%); /*Estou movendo o conteúdo 50% para esquerda (porque está negativo) e 50% para cima (porque está negativo*/
+    /* } 
+    
+     OU SEJA, O CONTAINER TEM QUE TER POSICIONAMENTO ABSOLUTO, PARA O CONTEUDO TER POSICIONAMENTO RELATIVO NO CONTAINER.
+     PARA MEXER EM TOP E LEFT DEVEMOS TER POSICIONAMENTO RELATIVO, E CONTEUDO QUE FOR MEDIDO NO TOP E LEFT VAI COMEÇAR POSTERIORMENTE A ESSAS MEDIDAS.
+     PARA MOVER MANUALMENTE O CONTEÚDO DEVE-SE USAR O TRANSFORM: TRANSLATE(MEDIDA1, MEDIDA2).
+     */
+     /*FIM DAS DICAS DE CENTRALIZAÇÃO*/
+    
+    /*SHORTHAND*/
+
+    font: italic lighter 2em 'work sans' , Arial , sans-serif;
+    /*Shorthand font serve para resumir a formatação da fonte em uma única linha, ao invés de fazermos:
+    font-family: 'work sans', Arial, sans-serif; 
+    font-size: 2em;
+    font-weight: 200;
+    font-style: italic;
+    Fazemos apenas:
+    font-style / font-weight / font-size / font-family 
+    LEMBRANDO QUE TEM QUE SER NESSA ORDEM, CASO NÃO QUEIRA O FONT-STYLE É SÓ TIRAR ELE, MAS TEM QUE CONTINUAR NA ORDEM
+    */   
+    box-shadow: inset 6px 6px 13px 0px black;  /*inset a sombra fica para dentro*/
+    box-shadow: 10px 10px 10px #0120306e; /*Sombra externa das bordas do bloco, primeiro parametro quanto vai ficar para o lado, segundo parametro quanto vai ficar para baixo, terceiro parametro quanto vai espalhar e o quarto parametro é a cor*/
+    border-radius: 20px 12px 40px 45px; /*Shorthand de borda com pontas redondas, superior esquerda, superior direita, inferior direita, inferior esquerda. Também pode ser usado com uma div para fazer uma bola através da medida de porcentagem, exemplo border-radius: 50%*/
+    border: 2px solid black; /*Shorthand de borda, largura da borda, tipo da borda e cor da borda*/
+    padding: 10px 10px 10px 10px; /*Cima, direita, baixo esquerda*/
+    margin: 20px auto 20px auto; /*Cima, direita, baixo esquerda. Nesse caso o conteúdo está centralizado horizontalmente e com espaço de cima e em baixo de acordo com minha precisão*/
+    outline: 15px dashed rgb(5, 5, 59); /*Linha entre a borda e a margem,espessura,tipo,cor*/
+    /* shorthand para backgrounds com imagens
+       color > image > position > repeat > attachment             
+        Obs: o background-size ainda não faz parte da shorthand*/
+    background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed ;
+                
+    /* FIM DOS SHORTHANDS */
+
+    color: #024566;   /*Vai colocar cor na fonte*/
+    text-transform: uppercase; /*Vai colocar todas as letras em maiúsculo*/
+    font-variant: small-caps; /*Vai colocar todas as letras em maiúsculo só que as primeiras de cada palavra vão ficar maior*/
+    font-family: Arial, Helvetica, sans-serif;/*Nem todos os dispositivos têm a mesma fonte, por isso o font-family é feito com 2 familias de fontes,e uma genérica, ele vai tentar achar a primeira, caso nao consiga, tenta a segunda, caso não consiga ele pega qualquer outra fonte sem serifa, isso se chama safe-combinations. Fontes com o nome com espaço tem que ser colocada entre parênteses, exemplo: 'Courier New'*/
+    font-size: 1em ;/*Para medida de fontes, o w3schools sugere que se use a medida por em, recomendadando que se coloque 1em no tamanho da fonte, 1em equivale a 16px(pixel), que é considerada o tamanho padrão de fontes para navegadore. NÃO PODE TER ESPAÇO ENTRE O NÚMERO E A MEDIDA, EXEMPLO 1 EM , O CERTO É 1EM    */
+    font-weight: lighter; /*Peso da fonte. Não são todas as fontes que tem pesos diferentes, mas os pesos mais comuns são: lighter, normal, bold, bolder; na ordem do peso mais fraco para o mais forte, podendo ser alterado o peso por meio de números também, de 100-900, mas lebrando também que não são todas as fontes que tem os pesos numéricos. Peso é basicamente a grossura da fonte, tornando ela em uma espécie de negrito*/
+    font-style: italic; /*Serve para colocar a fonte em itálico através do CSS,  lembrando que a familia de  fonte tem que ter essa funcionalidade*/  
+    background-image:linear-gradient(to right ,#DAFDBA,#9AEBA3);/*Cor de fundo do objeto com degradê, linear-gradient é uma função, o primeiro parâmetro é a direção do degradê, e os demais parâmetros são as cores, podendo colocar quantas cores quiser*/
+    background-image: url(imagens/pattern001.png); /*Forma de colocar imagem de fundo sem sentido semântico, apenas visual*//*Caso a imagem seja pequena para determinado componente, ela se repete até preencher toda a caixa, caso a imagem seja muito grande, deve ser configurada manualmente para ficar certinha na página web*/
+    background-size: 100px 100px;/*Configuração manualmente do tamanho da imagem de fundo*/
+    background-size: contain; /*Faz com que o tamanho da imagem seja 100% exibida, porém, pode ser que a imagem não ocupe a viewport inteira e fique mostrando o fundo*/
+    background-size: cover;/*Faz com que a imagem caiba na caixa inteira, pode ser que ele corte um pouco da imagem na parte de altura ou largura*/
+    background-repeat: repeat-y; /*Configuração de repetição da imagem, existe no-repet para não repetir, repet-x para repetir do eixo do x e etc, basta consultar as outras no pdf*
+    background-color: white;/*Cor de fundo do objeto*/ 
+    background-position: left top; /*O ponto de ancoragem da imagem vai da esquerda em cima, ou seja, o ponto que vai ser dado como principal se baseia na IMAGEM com a posição que foi configurada no CSS, nesse caso, ponto  de ancoragem da esquerd em cima*/ 
+    background-attachment: fixed;   /* Vínculo: O fundo vai ficar com a imagem travada independente da rolagem de tela *//*Efeito paralax (vai fixar a imagem na rolagem da tela)*/    
+    background-attachment: scroll;   /* O fundo vai rolar de acordo com o conteúdo */  
+    text-shadow: 2px 2px 2px #0245663a; /*Sombra externa das bordas do texto, primeiro parametro quanto vai ficar para o lado, segundo parametro quanto vai ficar para baixo, terceiro parametro quanto vai espalhar e o quarto parametro é a cor*/   
+    width: 600px;  /*Largura*/
+    width: 100%; /*Largura das imagens de 100% do conteúdo independente do tamanho do conteúdo, como no caso das imagens*/    
+    min-width: 300px; /*Largura mínima, ou seja, ele se adapta em uma tela de  300px, menos que isso ele quebra*/
+    max-width: 1000px; /*Largura máxima, ou seja, quando a largura da tela chegar até 1000px ele para de crescer*/ 
+    height: 300px; /*Altura*/
+    height: 98vh; /*O conteúdo vai ocupar 98% da viewheight(tela)*/   
+    min-height: 100vh; /*O tamanho mínimo que vai ser ocupado é 100% da minha tela, em posição de altura*/    
+    padding-top: 15px; /*Espaço interno borda para dentro,cima*/
+    padding-left: 14px; /*Espaço interno borda para dentro,direita*/
+    padding-bottom: 25px; /*Espaço interno borda para dentro,baixo*/
+    padding-right: 4px; /*Espaço interno borda para dentro,esquerda*/
+    margin-top: 20px;  /*Espaço externo da borda para fora,cima*/
+    margin-right: 24px; /*Espaço externo da borda para fora,direita*/
+    margin-bottom: 30px;/*Espaço externo da borda para fora,baixo*/
+    margin-left: 10px;/*Espaço externo da borda para fora,esquerda*/
+    margin:auto;  /*Vai centralizar a caixa horizontalmente*/
+    outline-width: 15px; /*Linha entre a margine a borda,Espessura*/
+    outline-style: dashed; /*Linha entre a margine a borda,Tipo*/
+    outline-color: aquamarine; /*Linha entre a margine a borda,Cor*/
+    border-width: 10px; /*Largura da borda*/
+    border-style: solid; /*Tipo da borda*/
+    border-color: darkcyan; /*Cor da borda*/
+    border-radius: 30px; /*Vai arrededondar as pontas quadradas para que fiquem com pontas redondas*/
+    border-bottom-left-radius: 10px; /*Vai arrededondar a ponta inferior esquerda*/
+    border-bottom-right-radius: 15px; /*Vai arrededondar a ponta inferior direita*/
+    border-top-left-radius: 30px; /*Vai arrededondar a ponta superior esquerda*/
+    border-top-right-radius: 40px; /*Vai arrededondar a ponta superior direita*/
+    text-align: center; /*Vai centralizar o texto horizontalmente*/
+    text-align: justify; /*Vai alinhar o texto tanto na esquerda quanto na direita*/
+    text-align: right; /*Vai alinhar o texto na direita*/
+    text-align: left; /*Vai alinhar o texto na esquerda */
+    text-indent: 20px;  /*Vai dar um determinado espaço no começo do texto*/
+    line-height: 1em;/*Espaçamento entre linhas, de cima para baixo, geralmenteé configurado no parágrafo*/
+    text-decoration: underline; /*Serve para colocar a fonte no sublinhado, lembrando que a familia de  fonte tem que ter essa funcionalidade*/
+    text-decoration: none;/*Vai tirar o sublinhado do link*/
+    display: none; /*Serve para esconder o conteúdo, ou seja, ocultar*/
+    display: inline-block; /*Serve para deixar os elementos na mesma linha*/
+    display: block; /*Serve para mostrar o conteúdo e tornar o conteúdo um bloco, caso não seja, como por exemplo nas imagens*/
+    transition-duration: 0.5s; /*Tempo que demora para fazer a transição completa para as configurações*/
+    list-style-position: inside; /*Está se referindo a posição da lista, inside coloca as bolinhas da lista para dentro do bloco*/
+    columns: 2;  /*vai dividir a lista em 2 colunas*/
+    list-style-type: '\2714\00A0'; /* list-style-type: É para trocar a bolinha da lista, \2714 é o sinal de check e \00A0 é um espaço em branco como se fosse o nbsp. OBS: ESSA LINHA DE CÓDIGO NÃO É COMPATÍVEL COM TODO TIPO DE NAVEGADOR*/    
+}
+table{
+    vertical-align: top;/*Vai colocar o dado da tabela dentro do quadrado verticalmente em cima(top), no meio(middle) ou em baixo(bottom) */
+    border-collapse: collapse; /*Vai tirar o espaço de linha entre os dados da tabela*/
+    position: relative; /*Faz parte da configuração para fixar o cabeçalho da tabela (É FEITO NA TABELA(TABLE), PARA QUE AS OUTRAS CONFIGURAÇÕES SEJAM FEITAS POSTERIORMENTE*/
+}
+            /*
+            tbody > tr:nth-child(2n){ Efeito zebrado(É uma pseudoclasse)(serve para o usuário ter mais facilidade para entender a tabela)nth-child(2n) faz com que as configurações sejam aplicadas de 2 em 2 linhas, se quisesse de 3 em 3 era só alterar dentro do parênteses, e assim sucessivamente, ou fazer por ímpar(odd) e par(even), como está abaixo           
+            */
+            tbody > tr:nth-child(odd){ /*Ou 2n-1 dentro do parênteses(Para a configuração começar da primeira linha(tr) da tabela)*/
+                background-color: lightgrey; 
+            }
+            tbody > tr:nth-child(even){ /*Ou 2n dentro do parênteses(Para a configuração começar da segunda linha(tr) da tabela), porque como é 2, está pulando de 2 em 2*/
+                background-color: rgba(54, 252, 9, 0.313); 
+            }
+            /*Mantendo o cabeçalho fixo na tela, pelo menos na parte da tabela (AINDA NÃO SERVE PARA TODOS OS NAVEGADORES) (PARA QUE ISSO SEJA FEITO, A TABELA TEM QUE ESTAR COM POSICIONAMENTO RELATIVO, COMO FOI FEITO ACIMA)
+            */
+            thead > tr > th{
+                position: sticky; /*Colável/grudável*/
+                top: -1px; /*vai colar assim que a tabela subir*/
+                background-color:  rgb(32, 31, 31); /*esse background tem que ser da mesma cor do background do cabeçalho th dentro do thead, é obrigatório colocar o background porque senão vai grudar somente o texto*/
+            } 
+            div#container{ /*Dica para deixar a tabela "responsiva" (A TABELA TEM QUE ESTAR DENTRO DE UMA DIV )*/ 
+                overflow-x: auto; /*Deixei a rolagem no eixo x (de lado)"*/
+            }

@@ -1,0 +1,360 @@
+<!DOCTYPE>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale1.0">
+        <title>Desafio 02</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #aviso{
+                background-color: yellow;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            th,td{
+                border: 1px solid black;
+                padding: 10px;
+            }
+            .th{
+                background-color: gray;
+                color:white;
+            }
+            #media{
+                text-align: left;
+            }
+            .cnome{
+                background-color: greenyellow
+            }
+            .csexo{
+                background-color: royalblue;
+            }
+            .cidade{
+                background-color: coral;
+            }
+
+
+
+            /*RESPONSIVA*/
+            #responsiva  tr:nth-child(even){
+                background-color: rgba(54, 252, 9, 0.5);            
+            }
+            .pro{
+                background-color: rgba(0, 0, 255, 0.434);                   
+            }
+            .jan{
+                background-color: yellow;   
+            }
+            .fev{
+                background-color: aqua;
+            }
+            .mar{
+                background-color: rgba(255, 42, 0, 0.683);
+            }
+            .abr{
+                background-color: greenyellow;
+
+            }            
+            .jun{
+                background-color: blanchedalmond;
+            }
+            .jul{
+                background-color: rgb(232, 145, 14);
+            }           
+            .out{
+                background-color: azure;
+
+            }
+            .nov{
+                background-color: rgb(0, 193, 193);
+            }           
+            #responsiva .prototipacao th{
+                color: white;
+                background-color: darkslategrey;
+            }
+            div#container{ /*Dica para deixar a tabela "responsiva"*/
+                overflow-x: auto; /*Deixei a rolagem no eixo x (de lado)"*/
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Tabela Completa(COM TODOS OS CONCEITOS)</h1>            
+        </header>
+        <main>
+            <h2 id="aviso">ESSE ARQUIVO TEM PRATICAMENTE TODO CONTEÚDO DE TABELAS</h2>
+            <section>
+                <h2>Desafio 02</h2>
+                <table>
+                    <caption>Média de Alunos</caption>
+                    <thead>
+                        <tr class="th">
+                            <th rowspan="2" scope="col">Área</th>
+                            <th rowspan="2" scope="col">Disciplinas</th>
+                            <th colspan="2" scope="colgroup">Notas</th>
+                            <th rowspan="2" scope="col">Média</th>
+                        </tr>
+                        <tr class="th">
+                            <th scope="col" >Nota 1</th>
+                            <th scope="col" >Nota 2</th>
+                        </tr>                        
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="4" scope="rowgroup">Exatas</th>
+                            <td>Matemática</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr>
+                            <td>Física</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr>
+                            <td>Química</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr>
+                            <td>Biologia</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr class="th" >
+                            <th colspan="4" span="row" scope="row" id="media">Média de Exatas</th>
+                            <td>0.0</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Humanas</th>
+                            <td>História</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr>
+                            <td>Geografia</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr class="th">
+                            <th colspan="4" span="row" scope="row"   id="media">Média de Humanas</th>
+                            <td >0.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h2>Personalizando a COLUNA da tabela</h2>
+                <table>
+                    <colgroup> <!--Serve para personalizar a coluna como um todo -->
+                        <col class="cnome"> <!--Primeira coluna-->
+                        <col class="csexo"> <!--Segunda coluna--><!--CASO QUEIRA A MESMA CONFIGURAÇÃO PARA 2 OU MAIS COLUNAS, BASTA COLOCAR SPAN="2 (OU MAIS)" E EXCLUIR O PRÓXIMO COL, COM ISSO A CONFIGURAÇÃO VA SER FEITA NESSA E NA PRÓXIMA COLUNA, NA ORDEM. EXEMPLO ABAIXO:-->
+                        <col class="cidade" span="2"> <!--Terceira coluna-->                         
+                    </colgroup> <!--NÃO TEM NECESSIDADE DE CLASSIFICAR AS COLUNAS DA TABELA, BASTA COLOCAR ESSE COLGROUP E POSTERIORMENTE COL QUE JÁ CLASSIFICA A COLUNA AUTOMATICAMNETE-->
+                    <caption>Cadastro</caption>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sexo</th>
+                    <th>Idade</th>
+                    <th>Profissão</th>
+                </tr>
+                <tr>
+                    <td>Ana Maria</td>
+                    <td>F</td>
+                    <td>25</td>
+                    <td>Jornalista</td>
+                </tr>
+                <tr>
+                    <td>Cláudio</td>
+                    <td>M</td>
+                    <td>28</td>
+                    <td>Programador</td>
+                </tr>
+                <tr>
+                    <td>Gustavo</td>
+                    <td>M</td>
+                    <td>42</td>
+                    <td>Professor</td>
+                </tr>
+                <tr>
+                    <td>Hélio</td>
+                    <td>M</td>
+                    <td>19</td>
+                    <td>Vendedor</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>F</td>
+                    <td>39</td>
+                    <td>Médica</td>
+                </tr>
+                <tr>
+                    <td>Otávio</td>
+                    <td>M</td>
+                    <td>22</td>
+                    <td>Nutricionista</td>
+                </tr>
+            </table>
+            </section>
+            <section>
+                <h1>Tabela Responsiva</h1>
+                <div id="container"><!--Para deixar a tabela responsiva-->
+                    <table id="responsiva">
+                        <colgroup>
+                            <col class="pro">
+                            <col class="jan">
+                            <col class="fev">
+                            <col class="mar">
+                            <col class="abr" span="2">                       
+                            <col class="jun">
+                            <col class="jul" span="3">                      
+                            <col class="out">
+                            <col class="nov" span="2">                        
+                        </colgroup>
+                        <caption>Tabela responsiva</caption>
+                        <thead>
+                            <tr class="prototipacao">
+                                <th>Produto</th>
+                                <th>Janeiro</th>
+                                <th>Fevereiro</th>
+                                <th>Março</th>
+                                <th>Abril</th>
+                                <th>Maio</th>
+                                <th>Junho</th>
+                                <th>Julho</th>
+                                <th>Agosto</th>
+                                <th>Setembro</th>
+                                <th>Outubro</th>
+                                <th>Novembro</th>
+                                <th>Dezembro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>TV 40"</th>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>07</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>05</td>
+                                <td>02</td>
+                                <td>01</td>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>16</tr>
+                            </tr> 
+                            <tr>
+                                <th>Home Theater</th>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>07</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>05</td>
+                                <td>02</td>
+                                <td>01</td>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>16</tr>
+                            </tr> 
+                            <tr>
+                                <th>Samsung Galaxy S20</th>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>07</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>05</td>
+                                <td>02</td>
+                                <td>01</td>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>16</tr>
+                            </tr> 
+                            <tr>
+                                <th>IPad Mini</th>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>07</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>05</td>
+                                <td>02</td>
+                                <td>01</td>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>16</tr>
+                            </tr> 
+                            <tr>
+                                <th>Play Station 4</th>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>07</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>05</td>
+                                <td>02</td>
+                                <td>01</td>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>16</tr>
+                            </tr> 
+                            <tr>
+                                <th>Lava Louças</th>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>07</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>05</td>
+                                <td>02</td>
+                                <td>01</td>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>16</tr>
+                            </tr> 
+                            <tr>
+                                <th>Amazon Echo</th>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>07</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>05</td>
+                                <td>02</td>
+                                <td>01</td>
+                                <td>01</td>
+                                <td>04</td>
+                                <td>16</tr>
+                            </tr>                        
+                        </tbody>
+                        <tfoot>
+                            <tr class="prototipacao">
+                                <th colspan="13">Linha decorativa (rodapé da tabela)</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam repellendus a expedita facere quod officiis! Vel adipisci omnis, minima assumenda quibusdam blanditiis culpa voluptatibus accusamus dignissimos voluptate rem harum. Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit modi, facere, ratione eum in ipsum dolorum animi eveniet neque qui quam, fuga quae illum esse vel delectus velit vitae laudantium! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur placeat reprehenderit illo qui? Obcaecati, corporis magni inventore adipisci amet dolores sed beatae optio voluptate nesciunt voluptatum incidunt atque exercitationem omnis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo tenetur esse ab eveniet cumque perspiciatis, possimus aut distinctio mollitia et facilis laborum! Ea dolorem quae aperiam non? Adipisci, consequatur saepe.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam repellendus a expedita facere quod officiis! Vel adipisci omnis, minima assumenda quibusdam blanditiis culpa voluptatibus accusamus dignissimos voluptate rem harum. Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit modi, facere, ratione eum in ipsum dolorum animi eveniet neque qui quam, fuga quae illum esse vel delectus velit vitae laudantium! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur placeat reprehenderit illo qui? Obcaecati, corporis magni inventore adipisci amet dolores sed beatae optio voluptate nesciunt voluptatum incidunt atque exercitationem omnis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo tenetur esse ab eveniet cumque perspiciatis, possimus aut distinctio mollitia et facilis laborum! Ea dolorem quae aperiam non? Adipisci, consequatur saepe.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam repellendus a expedita facere quod officiis! Vel adipisci omnis, minima assumenda quibusdam blanditiis culpa voluptatibus accusamus dignissimos voluptate rem harum. Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit modi, facere, ratione eum in ipsum dolorum animi eveniet neque qui quam, fuga quae illum esse vel delectus velit vitae laudantium! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur placeat reprehenderit illo qui? Obcaecati, corporis magni inventore adipisci amet dolores sed beatae optio voluptate nesciunt voluptatum incidunt atque exercitationem omnis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo tenetur esse ab eveniet cumque perspiciatis, possimus aut distinctio mollitia et facilis laborum! Ea dolorem quae aperiam non? Adipisci, consequatur saepe.</p>
+            </section>
+        </main>
+    </body>
+</html>

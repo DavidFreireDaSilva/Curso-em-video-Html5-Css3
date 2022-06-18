@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+h2#exemplo1{ 
+    /*Representação por nomes (limitada porque uma hora o nome das cores padrões acabam)*/
+    background-color:antiquewhite;
+    color: darkblue;
+}
+h2#exemplo2{ 
+    /*Representação por código hexadecima*/
+    background-color:#0000ff;
+    color:#ffffff;
+}
+h2#exemplo3{
+  /*Representação por código rgb e rgba (red,green,blue,tansparência( vai de 0.0 - 1.0)*/
+    background-color: rgba(162, 152, 167, 0.1);
+    color: rgb(0, 173, 193);
+}
